@@ -1,8 +1,8 @@
-package com.gft.base;
+package com.gft.PrimeiroPrograma.base;
 
 public class Order {
 
-    private String code;
+    private final String code;
 
     public Order(String code) { //Construtor
         this.code = code; //O atributo code irá receber o q for passado no método construtor(parâmetro) 
