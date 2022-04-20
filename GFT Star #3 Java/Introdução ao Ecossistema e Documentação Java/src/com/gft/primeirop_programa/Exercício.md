@@ -1,4 +1,6 @@
-package com.gft.PrimeiroPrograma.base;
+```Java
+
+package com.gft.primeirop_programa.base;
 
 public class Order {
 
@@ -12,3 +14,18 @@ public class Order {
         return "A frase é "+ code;
     }
 }
+
+
+package com.gft.primeirop_programa;
+
+import com.gft.primeirop_programa.base.Order;
+
+public class MyFirstProgram {
+    public static void main(String[] args) {
+        
+        Order ordem = new Order("dsada");
+        System.out.println(ordem);
+    }
+}
+
+```

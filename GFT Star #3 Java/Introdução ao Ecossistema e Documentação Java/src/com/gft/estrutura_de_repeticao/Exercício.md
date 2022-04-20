@@ -1,4 +1,6 @@
-package com.gft.EstruturaDeRepeticao.base;
+```Java
+
+package com.gft.estrutura_de_repeticao.base;
 
 public class Ordem {
     private final String code;
@@ -12,7 +14,7 @@ public class Ordem {
     }
 
     //Usando while
-    public void imprimirItens() {//percorres por todos os itens da lista e imprimi-los
+    public void imprimirItens() {//percorrer por todos os itens da lista e imprimi-los
         int i = 0;
         while (i < itens.length) {//length irá verificar o tamanho da lista.
             System.out.println(itens[i]);//i será um item específico. No momento q laço passar por um item(i), ele será printado. 
@@ -45,3 +47,15 @@ public class Ordem {
         }
     }
 }
+
+package com.gft.estrutura_de_repeticao;
+
+public class Executando {
+    public static void main(String[] args) {
+        
+    }
+}
+
+
+
+```

@@ -1,4 +1,6 @@
-package com.gft.Javadoc;
+```Java
+
+package com.gft.javadoc;
 
 import java.math.BigDecimal;
 //
@@ -23,3 +25,5 @@ public class ExplicandoOcodigo {
         }
     }
 }
+
+```

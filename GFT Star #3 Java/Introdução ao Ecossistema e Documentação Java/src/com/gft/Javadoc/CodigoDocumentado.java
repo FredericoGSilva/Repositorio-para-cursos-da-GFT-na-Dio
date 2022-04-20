@@ -1,8 +1,6 @@
-package com.gft.Javadoc;
+package com.gft.javadoc;
 
 import java.math.BigDecimal;
-
-//COMO GERAR O JAVADOC
 
 /**
  * @author Frederico Guilherme
@@ -11,7 +9,6 @@ import java.math.BigDecimal;
  * @since Release 1.0.0
  */
 public class CodigoDocumentado {
-    private final String code;
     private final BigDecimal valorTotal;
 
     /**
@@ -20,11 +17,10 @@ public class CodigoDocumentado {
      * @param code          Código do pedido
      * @param valorTotal    Valor total do pedido
      */
-    public CodigoDocumentado(String code, BigDecimal valorTotal) {
-        this.code = code;
+    public CodigoDocumentado(BigDecimal valorTotal) {
         this.valorTotal = valorTotal;
     }
-
+    
     /**
      * Calcula o valor total de acordo com o valor do pedido. Se o valor for maio que R$100,00 uma taxa será cobrada
      * @return  Valor total do pedido com as taxas

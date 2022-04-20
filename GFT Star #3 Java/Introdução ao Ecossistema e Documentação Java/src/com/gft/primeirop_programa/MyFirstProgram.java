@@ -1,6 +1,6 @@
-package com.gft.PrimeiroPrograma;
+package com.gft.primeirop_programa;
 
-import com.gft.PrimeiroPrograma.base.Order;
+import com.gft.primeirop_programa.base.Order;
 
 public class MyFirstProgram {
     public static void main(String[] args) {
