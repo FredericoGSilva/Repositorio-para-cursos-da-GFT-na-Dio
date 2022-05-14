@@ -1,6 +1,6 @@
-package bootcamp.entendendo_métodos_java;
+package cursos.entendendo_métodos_java;
 
-public class QuadrilateroComReturn {
+public class QuadrilateroRetorno {
 
     public static double area(double lado) {
         return lado * lado;
