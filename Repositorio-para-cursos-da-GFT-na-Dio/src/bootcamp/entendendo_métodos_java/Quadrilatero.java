@@ -1,4 +1,4 @@
-package cursos.entendendo_métodos_java;
+package bootcamp.entendendo_métodos_java;
 
 public class Quadrilatero {
 

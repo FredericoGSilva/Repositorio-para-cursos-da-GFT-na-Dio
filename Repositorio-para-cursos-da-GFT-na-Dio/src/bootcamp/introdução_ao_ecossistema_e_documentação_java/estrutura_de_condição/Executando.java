@@ -5,7 +5,7 @@ import bootcamp.introdução_ao_ecossistema_e_documentação_java.estrutura_de_c
 public class Executando {
     public static void main(String[] args) {
 
-        EstruturaDeCondicao teste = new EstruturaDeCondicao(1234); 
-        System.out.println(teste);
+        EstruturaDeCondicao teste = new EstruturaDeCondicao(1000); 
+        System.out.println(teste.calcularTaxa());
     }
 }

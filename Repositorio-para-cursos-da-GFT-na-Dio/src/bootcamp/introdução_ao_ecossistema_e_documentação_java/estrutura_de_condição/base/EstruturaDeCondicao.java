@@ -18,7 +18,7 @@ public class EstruturaDeCondicao {
     }
 
     // Estrutura de condição com Switch case
-    public double calcularTaxaComSwitchCase() {
+    /*public double calcularTaxaComSwitchCase() {
         switch (this.valorTotal) {
             case 100:
                 return this.valorTotal * 0.99;
@@ -28,5 +28,5 @@ public class EstruturaDeCondicao {
                 return this.valorTotal;
 
         }
-    }
+    }*/
 }

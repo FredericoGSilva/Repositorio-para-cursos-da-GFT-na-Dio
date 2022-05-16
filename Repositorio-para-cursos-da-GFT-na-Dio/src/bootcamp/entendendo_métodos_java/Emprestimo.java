@@ -1,4 +1,4 @@
-package cursos.entendendo_métodos_java;
+package bootcamp.entendendo_métodos_java;
 
 //Calcular empréstimo a partir d um valor de uma taxa e de uma quantidade d parcelas
 
