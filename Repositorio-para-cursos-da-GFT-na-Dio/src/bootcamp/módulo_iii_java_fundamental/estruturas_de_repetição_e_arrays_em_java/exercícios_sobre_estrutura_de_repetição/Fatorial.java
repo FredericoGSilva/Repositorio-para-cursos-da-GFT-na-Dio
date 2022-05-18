@@ -1,4 +1,4 @@
-package bootcamp.módulo_iii_java_fundamental.estruturas_de_repetição_e_arrays_em_java.exercícios_sobre_strutura_de_repetição;
+package bootcamp.módulo_iii_java_fundamental.estruturas_de_repetição_e_arrays_em_java.exercícios_sobre_estrutura_de_repetição;
 
 /*
 Faça um programa que calcule o fatorial de um número inteiro fornecido pelo usuário.
@@ -19,7 +19,7 @@ public class Fatorial {
         fatorial = scan.nextInt();
 
         System.out.print(fatorial + "! = ");
-        for (int i = fatorial; i >= 1; i--) { //i receber fatorial;  enquanto i maior q 1;  i--;  Ou seja, fatorial tem q diminuir até chegar a 1 
+        for (int i = fatorial; i >= 1; i--) { //i receber fatorial;  enquanto i maior ou igual 1;  i--;  Ou seja, fatorial tem q diminuir até chegar a 1 
             multiplicacao *= i;
 
         }

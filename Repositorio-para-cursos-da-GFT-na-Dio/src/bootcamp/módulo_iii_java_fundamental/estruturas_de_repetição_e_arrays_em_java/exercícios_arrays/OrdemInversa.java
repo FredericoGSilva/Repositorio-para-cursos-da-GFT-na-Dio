@@ -13,15 +13,13 @@ public class OrdemInversa {
         int contador = 0;
 
         System.out.println("Vetor normal");
-        while (contador < (vetor.length)) {/*length retorna o tamanho do vetor. -1 é por causa do 0 
-                                              length irá percorrer as posições e como eu tenho 6 elementos em 5 posições, p/ java entender q são não é 6 posições e sim 5*/
-
-            System.out.print(vetor[contador] + " "); //Assim q iniciar o contador será 0 e mostrará vetor na posição 0 q será -5 ....
+        while (contador <= (vetor.length -1)) {
+            System.out.print(vetor[contador] + " "); 
             contador++;
         }
 
         System.out.println("\nVetor inverso");
-        for (int i = (vetor.length - 1); i >= 0; i--) {//O loop só irá parar quando o vetor chegar na posição 0.
+        for (int i = (vetor.length - 1); i >= 0; i--) {
             System.out.print(vetor[i] + " ");
         }
     }

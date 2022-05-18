@@ -1,4 +1,4 @@
-package bootcamp.módulo_iii_java_fundamental.estruturas_de_repetição_e_arrays_em_java.exercícios_sobre_strutura_de_repetição;
+package bootcamp.módulo_iii_java_fundamental.estruturas_de_repetição_e_arrays_em_java.exercícios_sobre_estrutura_de_repetição;
 
 import java.util.Scanner;
 
