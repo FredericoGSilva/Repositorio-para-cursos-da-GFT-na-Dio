@@ -63,7 +63,6 @@ public class ExemploList {
         for (Double nota : notas) {
             System.out.println(nota);
         }
-    
     }
 }
 
