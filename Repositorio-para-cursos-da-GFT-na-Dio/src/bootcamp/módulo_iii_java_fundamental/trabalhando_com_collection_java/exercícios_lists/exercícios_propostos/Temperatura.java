@@ -5,6 +5,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
+/*Faça um programa que receba a temperatura média os 6 primeiros meses do ano e armazene-as em uma lista.
+Após isto, calcule a média semestral das temperaturas e mostre todas as temperaturas acima desta média,
+e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro e etc).
+*/
+
 public class Temperatura {
     public static void main(String[] args) {
 
@@ -12,7 +17,7 @@ public class Temperatura {
 
         List<Double> temperatura = new ArrayList<>();
 
-        // a cada loop o usuário têm q inserir a temeratura
+        // a cada loop o usuário têm q inserir a temperatura
         for (int i = 0; i < 6; i++) {
             System.out.println("Qual a temperatura: ");
             Double recebendoTemperatura = scan.nextDouble();
