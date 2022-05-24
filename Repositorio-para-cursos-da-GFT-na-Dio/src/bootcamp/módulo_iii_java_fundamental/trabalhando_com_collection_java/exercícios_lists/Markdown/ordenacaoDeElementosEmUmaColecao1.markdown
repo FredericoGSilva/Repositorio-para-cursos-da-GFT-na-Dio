@@ -35,7 +35,7 @@ public class ordenacaoDeElementosEmUmaColecao1 {
 
         /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 
-        //TENÇÃO COM ESSE EXERCÍCIO:
+        //ATENÇÃO COM ESSE EXERCÍCIO:
 
         //A classe Double têm um método para organizar, saber qm vêm primeiro e qm vêm depois em uma lista q esteja desorganizada.
         //interface Compateble - irei implementar a interface Comparable na classe Gato p/ java comparar os elementos d acordo cm os nomes
