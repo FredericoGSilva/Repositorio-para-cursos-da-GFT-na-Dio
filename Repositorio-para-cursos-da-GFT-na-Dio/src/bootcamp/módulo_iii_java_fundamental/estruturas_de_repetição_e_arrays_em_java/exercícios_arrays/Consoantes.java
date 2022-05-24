@@ -31,10 +31,10 @@ public class Consoantes {
                 consoantes[i] = letra;
                 quantidadeConsoantes++;
             }
-
             i++;
-
         } while (i < consoantes.length);
+
+        scan.close();
 
         System.out.println("Consoantes: ");
 

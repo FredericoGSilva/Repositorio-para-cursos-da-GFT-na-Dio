@@ -18,6 +18,8 @@ public class Fatorial {
         System.out.println("Digite um número: ");
         fatorial = scan.nextInt();
 
+        scan.close();
+
         System.out.print(fatorial + "! = ");
         for (int i = fatorial; i >= 1; i--) { //i receber fatorial;  enquanto i maior ou igual 1;  i--;  Ou seja, fatorial tem q diminuir até chegar a 1 
             multiplicacao *= i;

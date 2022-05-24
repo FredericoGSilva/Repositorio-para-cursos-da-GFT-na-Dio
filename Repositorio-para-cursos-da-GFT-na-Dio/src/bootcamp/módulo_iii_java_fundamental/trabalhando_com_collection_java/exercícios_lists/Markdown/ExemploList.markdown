@@ -43,7 +43,7 @@ public class ExemploList {
         notas.add(7.0);
         notas.add(0.0);
         notas.add(3.6);
-        System.out.println(notas.toString());
+        System.out.println(notas.toString()); //---toString: método retorna a representação string d um objeto
 
         System.out.println("Exiba a posição da nota 5.0: " + notas.indexOf(5.0)); // indexOf = método q retorna um índice ou uma posição int - tenho q passar o elemento para retornar a posição q o elemento está.
     

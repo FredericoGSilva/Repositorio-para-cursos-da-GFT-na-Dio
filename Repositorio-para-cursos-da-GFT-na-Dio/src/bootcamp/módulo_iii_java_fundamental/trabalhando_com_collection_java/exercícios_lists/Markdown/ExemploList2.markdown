@@ -25,7 +25,7 @@
         Double soma = 0.0;
 
         while(iterator.hasNext()) {//iterator.hasNext() = a partir d um elemento, hasNext() verifica se têm um próximo elemento, se tiver é retornado true
-            Double next = iterator.next();//esse próximo elemento é colocado dentro da variável "next".  método next() = "vai para o próximo"
+            Double next = iterator.next();//esse próximo elemento é colocado dentro da variável "next".  método next() = "vai para o próximo elemento"
             soma += next; //a cada laço, vai somando elemento com o próximo elemento
         }                 //quando chegar no final, hasNext() irá "perguntar" se têm próximo terá false como resposta e irá encerrar o laço. 
     
