@@ -1,4 +1,4 @@
-package bootcamp.módulo_iii_java_fundamental.trabalhando_com_collection_java.exercícios_lists.exercícios_propostos;
+package bootcamp.módulo_iii_java_fundamental.trabalhando_com_collection_java.exercícios_list.exercícios_propostos;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -106,7 +106,8 @@ class ComparaCor implements Comparator<Gato> {
     @Override
     public int compare(Gato gato1, Gato gato2) {
         //gato1.pegaSuaCor e comparaIgnoraFormaDaEscrita com gato2.pegaSuaCor
-        return gato1.getCor().compareToIgnoreCase(gato2.getCor());//compareToIgnoreCase = retorna um int. Então se esse return retornar 0, qr dizer q o "gato" q estou comparando cm o próximo "gato" da lista é pq os 2 gatos têm cores iguais.    
+        return gato1.getCor().compareToIgnoreCase(gato2.getCor());//compareToIgnoreCase = retorna um int. Então se esse return retornar 0, qr dizer q o "gato" q estou comparando cm o próximo "gato" da lista é pq os 2 gatos têm cores iguais. 
+        												          //O próprio método compareTo() tb retorna 0 -1 ou 1.
                                                                  //se retornar 1 qr dizer q o gato q estou comparando têm têm q ficar depois ou seja, é maior do gato q está sendo comparado
                                                                 //se retornar -1 qr dizer q o gato q estou comparando têm q ficar antes ou seja, é menor do cada q o gato está sendo comparado 
     }
@@ -120,14 +121,14 @@ class ComparatorNomeCorIdade implements Comparator<Gato> {
         if (nome != 0) { //se o retorno for diferente de 0 ou seja, 1 ou -1 vou querer q ordene por nome pq os nomes serão diferentes podendo assim, fazer a comparação por nome
             return nome;
         }
-        
+
         int cor = gato1.getCor().compareToIgnoreCase(gato2.getCor()); //se os nomes forem iguais então vou ordenar por cor
+        
         if (cor != 0) {
             return cor;
         } else {
             return Integer.compare(gato1.getIdade(), gato2.getIdade());//se os nomes e as cores forem iguais, vou ordenar por idade
         }
     }
-
 }
 ```

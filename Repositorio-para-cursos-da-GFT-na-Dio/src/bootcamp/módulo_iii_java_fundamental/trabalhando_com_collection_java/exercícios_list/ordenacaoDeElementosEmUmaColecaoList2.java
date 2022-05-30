@@ -1,11 +1,11 @@
-package bootcamp.módulo_iii_java_fundamental.trabalhando_com_collection_java.exercícios_lists;
+package bootcamp.módulo_iii_java_fundamental.trabalhando_com_collection_java.exercícios_list;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class ordenacaoDeElementosEmUmaColecao2 {
+public class ordenacaoDeElementosEmUmaColecaoList2 {
     public static void main(String[] args) {
 
         List<Gato> meusGatos = new ArrayList<>() {{
@@ -20,11 +20,11 @@ public class ordenacaoDeElementosEmUmaColecao2 {
 
         /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
  
-        System.out.println("Ordem cor");
+        System.out.println("\nOrdem cor");
         meusGatos.sort(new ComparaCor());
         System.out.println(meusGatos);
 
-        System.out.println("Ordem Nome, Cor, Idade");
+        System.out.println("\nOrdem Nome, Cor, Idade");
         meusGatos.sort(new ComparatorNomeCorIdade());
         System.out.println(meusGatos);
         
@@ -105,8 +105,9 @@ class ComparatorNomeCorIdade implements Comparator<Gato> {
         if (nome != 0) { 
             return nome;
         }
-        
+
         int cor = gato1.getCor().compareToIgnoreCase(gato2.getCor()); 
+        
         if (cor != 0) {
             return cor;
         } else {
@@ -115,11 +116,3 @@ class ComparatorNomeCorIdade implements Comparator<Gato> {
     }
 
 }
-
-
-    
-
- 
-
-
-
