@@ -44,7 +44,7 @@ public class ConhecendoOsMétodosMapParte2 {
         }
         System.out.println("Soma dos consumos usando o entrySet(): " + soma);
 
-        //Também consigo usar o Iterator 
+        //Também consigo usar o Iterator e o laço while
 
         Iterator<Double> iterator = carrosPopulares.values().iterator(); 
         Double soma2 = 0.0;
