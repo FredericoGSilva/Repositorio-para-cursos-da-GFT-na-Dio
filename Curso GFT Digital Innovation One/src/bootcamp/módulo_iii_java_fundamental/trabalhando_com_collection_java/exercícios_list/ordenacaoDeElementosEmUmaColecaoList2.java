@@ -1,7 +1,6 @@
 package bootcamp.módulo_iii_java_fundamental.trabalhando_com_collection_java.exercícios_list;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -15,9 +14,11 @@ public class ordenacaoDeElementosEmUmaColecaoList2 {
         }};
 
         System.out.println("Ordem idade");
-        Collections.sort(meusGatos, new ComparatorIdade());
+        /*Collections.sort(meusGatos, new ComparatorIdade());
+        System.out.println(meusGatos);                                      */
+        
+        meusGatos.sort(new ComparatorIdade());
         System.out.println(meusGatos);
-
         /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
  
         System.out.println("\nOrdem cor");
@@ -67,7 +68,6 @@ class Gato implements Comparable<Gato> {
                 '}';
     }
     //MÉTODOS DE COMPARAÇÃO
-
     @Override
     public int compareTo(Gato gato) {
         // TODO Auto-generated method stub
@@ -92,7 +92,6 @@ class ComparaCor implements Comparator<Gato> {
 
     @Override
     public int compare(Gato gato1, Gato gato2) {
-        //gato1.pegaSuaCor e comparaIgnoraFormaDaEscrita com gato2.pegaSuaCor
         return gato1.getCor().compareToIgnoreCase(gato2.getCor()); 
     }
 }

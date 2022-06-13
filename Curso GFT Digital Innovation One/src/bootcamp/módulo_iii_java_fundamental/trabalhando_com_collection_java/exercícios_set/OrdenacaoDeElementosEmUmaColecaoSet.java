@@ -33,7 +33,7 @@ public class OrdenacaoDeElementosEmUmaColecaoSet {
                 add(new Series("That '70s show", "Fantasia", 25));
             }
         };
-
+        //3 formas diferente de imprimir 
         System.out.println("Impresso usando o loop forEach e buscando os atributos lá da classe atráves do método get()\n");
         for (Series recebeSeries : minhasSeries1) {
             System.out.println("Nome: " + recebeSeries.getNome() + " - " +
@@ -41,16 +41,12 @@ public class OrdenacaoDeElementosEmUmaColecaoSet {
                     "Tempo de episódio: " + recebeSeries.getTempoEpisodio());
         }
 
-        System.out.println("------------------------------------------------------------------------------------------------------------------");
-
         System.out.println("\nImpresso com o loop forEach e o método toString criado lá na " +
                 "classe (Series) que faz referência ao conjunto Set\n");
 
         for (Series serie : minhasSeries1) {
             System.out.println(serie);
         }
-
-        System.out.println("------------------------------------------------------------------------------------------------------------------");
 
         System.out.println("\nImpresso usando forEach e formatando com o printf\n");
 
@@ -61,40 +57,7 @@ public class OrdenacaoDeElementosEmUmaColecaoSet {
 
         System.out.println("------------------------------------------------------------------------------------------------------------------");
 
-        System.out.println("\nOrdem de inserção");
-
-        Set<Series> minhasSeries2 = new LinkedHashSet() {
-            {
-                add(new Series("Got", "Fantasia", 60));
-                add(new Series("Dark", "Drama", 60));
-                add(new Series("That '70s show", "Fantasia", 25));
-            }
-        };
-
-        for (Series series : minhasSeries2) {
-            System.out.println(series);
-        }
-
-        System.out.println("------------------------------------------------------------------------------------------------------------------");
-
-        System.out.println("\nOdem natural por (Tempo de episódio)");
-
-        Set<Series> minhasSeries3 = new TreeSet<>(minhasSeries1);
-
-        for (Series series : minhasSeries3) {
-            System.out.println(series);
-        }
-
-        System.out.println("------------------------------------------------------------------------------------------------------------------");
-
-        System.out.println("\nOrdem por Nome, Genêro e Tempo de Episódio");
-
-        Set<Series> minhasSeries4 = new TreeSet<>(new ComparatorNomeGeneroTempo());
-        minhasSeries4.addAll(minhasSeries1);
-
-        for (Series series : minhasSeries4) {
-            System.out.println(series);
-        }
+       
     }
 }
 

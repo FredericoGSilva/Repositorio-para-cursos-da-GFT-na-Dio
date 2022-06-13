@@ -57,14 +57,8 @@ public class OrdenacaoMap {
         }
         System.out.println("----------------------------------------------------------------------------------------");
 
-        System.out.println("Ordem alfabética (nomes dos livros)");
-     
-        Set<Map.Entry<String, Livro>> meusLivros4 = new TreeSet<>(new ComparatorNome());
-        meusLivros4.addAll(meusLivros1.entrySet()); 
-        for (Map.Entry<String,Livro> recebeEntry : meusLivros4) {
-            System.out.println(recebeEntry.getKey() + " - " + recebeEntry.getValue()); 
-        }    
-        
+    
+          
     }
 }
 
