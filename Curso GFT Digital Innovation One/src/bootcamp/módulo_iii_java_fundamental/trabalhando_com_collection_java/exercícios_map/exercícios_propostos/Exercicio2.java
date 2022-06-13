@@ -1,9 +1,7 @@
 package bootcamp.módulo_iii_java_fundamental.trabalhando_com_collection_java.exercícios_map.exercícios_propostos;
 
-import java.security.KeyStore.Entry;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
@@ -49,7 +47,7 @@ public class Exercicio2 {
         System.out.println("-----------------------------------------------------------------------------");
 
         System.out.println("Ordem número telefone: ");
-        
+
         Set<Map.Entry<Integer, Agenda>> agendaDeContatos3 = new TreeSet<>(new ComparaNumero());
         agendaDeContatos3.addAll(agendaDeContatos1.entrySet());
         for(Map.Entry<Integer, Agenda> imprimiEntry : agendaDeContatos3) {
