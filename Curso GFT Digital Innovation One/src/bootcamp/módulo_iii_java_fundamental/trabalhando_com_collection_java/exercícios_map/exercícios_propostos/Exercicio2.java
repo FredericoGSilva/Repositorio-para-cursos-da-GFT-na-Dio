@@ -2,6 +2,7 @@ package bootcamp.módulo_iii_java_fundamental.trabalhando_com_collection_java.ex
 
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
@@ -21,20 +22,19 @@ public class Exercicio2 {
         System.out.println("Ordem aleatória: ");
 
         Map<Integer, Agenda> agendaDeContatos1 = new HashMap<>() {{ 
-            put(3, new Agenda("Simba", 2222222));   //Colocar as chaves forá de ordem para ser imprimido aleatóriamente
-            put(1, new Agenda("Cami", 55555555));      
-            put(2, new Agenda("Jon", 1111111));    
+            put(1, new Agenda("Simba", 2222222)); 
+            put(4, new Agenda("Cami", 55555555));      
+            put(3, new Agenda("Jon", 1111111));    
         }};    
         Set<Map.Entry<Integer, Agenda>> entry = agendaDeContatos1.entrySet();
         for(Map.Entry<Integer, Agenda> imprimiEntry : entry) {
-            System.out.println(imprimiEntry.getKey() + " - " + imprimiEntry.getValue().getNome());/*Para ser imprimido em ordem aleatória, não posso imprimir as chaves pois será 
-                                                                    automaticamente organizado ou então fazer um put() com as chaves fora de ordem manualamente*/ 
+            System.out.println(imprimiEntry.getKey() + " - " + imprimiEntry.getValue().getNome()); 
         }
         System.out.println("-----------------------------------------------------------------------------");
 
         System.out.println("Ordem de inserção: ");
 
-        Map<Integer, Agenda> agendaDeContatos2 = new TreeMap<>() {{
+        Map<Integer, Agenda> agendaDeContatos2 = new LinkedHashMap<>() {{
             put(5, new Agenda("Simba", 2222222));
             put(1, new Agenda("Cami", 55555555));
             put(3, new Agenda("Jon", 1111111));
@@ -46,20 +46,29 @@ public class Exercicio2 {
         }
         System.out.println("-----------------------------------------------------------------------------");
 
-        System.out.println("Ordem número telefone: ");
+        System.out.println("Ordem Id: "); 
 
-        Set<Map.Entry<Integer, Agenda>> agendaDeContatos3 = new TreeSet<>(new ComparaNumero());
-        agendaDeContatos3.addAll(agendaDeContatos1.entrySet());
-        for(Map.Entry<Integer, Agenda> imprimiEntry : agendaDeContatos3) {
+        Map<Integer, Agenda> agendaDeContatos3 = new TreeMap<>();
+        agendaDeContatos3.putAll(agendaDeContatos2);
+        for(Map.Entry<Integer, Agenda> imprimiEntry : agendaDeContatos3.entrySet()) {
+            System.out.println(imprimiEntry.getKey() + " - " + imprimiEntry.getValue().getNome());
+        }
+        System.out.println("-----------------------------------------------------------------------------");
+
+        System.out.println("Ordem número telefone: "); 
+
+        Set<Map.Entry<Integer, Agenda>> agendaDeContatos4 = new TreeSet<>(new ComparaNumero());
+        agendaDeContatos4.addAll(agendaDeContatos1.entrySet());
+        for(Map.Entry<Integer, Agenda> imprimiEntry : agendaDeContatos4) {
             System.out.println(imprimiEntry.getKey() + " - " + imprimiEntry.getValue().getNumero());
         }    
         System.out.println("-----------------------------------------------------------------------------");
 
         System.out.println("Ordem nome contato: ");
 
-        Set<Map.Entry<Integer, Agenda>> agendaDeContatos4 = new TreeSet<>(new ComparaNome());
-        agendaDeContatos4.addAll(agendaDeContatos1.entrySet());
-        for(Map.Entry<Integer, Agenda> imprimirEntry : agendaDeContatos4) {
+        Set<Map.Entry<Integer, Agenda>> agendaDeContatos5 = new TreeSet<>(new ComparaNome());
+        agendaDeContatos5.addAll(agendaDeContatos1.entrySet());
+        for(Map.Entry<Integer, Agenda> imprimirEntry : agendaDeContatos5) {
             System.out.println(imprimirEntry.getKey() + " - " + imprimirEntry.getValue().getNome());
         }
     }
