@@ -2,11 +2,9 @@ package bootcamp.módulo_iii_java_fundamental.trabalhando_com_collection_java.ex
 
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.Map.Entry;
 import java.util.function.Function;
@@ -28,7 +26,7 @@ public class PrincipaisOperacoesStreamApi1 {
             put(3, new Agenda("Jon", 1111111));    
         }};    
 
-        System.out.println("Ordem número telefone: ");
+        System.out.println("1 - Ordem número telefone: ");
 
         // Classe Anônima
         Set<Map.Entry<Integer, Agenda>> agendaDeContatos2 = new TreeSet<>(new Comparator<Map.Entry<Integer, Agenda>>() {      
@@ -43,7 +41,7 @@ public class PrincipaisOperacoesStreamApi1 {
         } 
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 
-        // Function Interface 
+        // Function Interface no modo Classe Anônima 
         Set<Map.Entry<Integer, Agenda>> agendaDeContatos3 = new TreeSet<>(Comparator.comparing(new Function<Map.Entry<Integer, Agenda>, Integer>() {
             @Override
             public Integer apply(Entry<Integer, Agenda> objNumero) {
@@ -62,6 +60,42 @@ public class PrincipaisOperacoesStreamApi1 {
         for(Map.Entry<Integer, Agenda> imprimiEntry : agendaDeContatos4) {
             System.out.println(imprimiEntry.getKey() + " - " + imprimiEntry.getValue().getNumero());
         }                                   
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+
+        System.out.println("2 - Ordem nome contato: ");
+
+        // Classe Anônima
+        Set<Map.Entry<Integer, Agenda>> agendaDeContatos5 = new TreeSet<>(new Comparator<Map.Entry<Integer, Agenda>>() {
+            @Override
+            public int compare(Entry<Integer, Agenda> objNome1, Entry<Integer, Agenda> objNome2) {
+                return objNome1.getValue().getNome().compareTo(objNome2.getValue().getNome());
+            }
+        });
+        agendaDeContatos5.addAll(agendaDeContatos1.entrySet());
+        for(Map.Entry<Integer, Agenda> imprimiEntry : agendaDeContatos5) {
+            System.out.println(imprimiEntry.getKey() + " - " + imprimiEntry.getValue().getNome());
+        }
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+
+        //Function Interface no modo Classe Anônima
+        Set<Map.Entry<Integer, Agenda>> agendaDeContatos6 = new TreeSet<>(Comparator.comparing(new Function<Map.Entry<Integer, Agenda>, String>() {
+            @Override
+            public String apply(Entry<Integer, Agenda> objNome) {
+                return objNome.getValue().getNome();
+            }
+        }));
+        agendaDeContatos6.addAll(agendaDeContatos1.entrySet());
+        for(Map.Entry<Integer, Agenda> imprimiEntry : agendaDeContatos6) {
+            System.out.println(imprimiEntry.getKey() + " - " + imprimiEntry.getValue().getNome());
+        }
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+
+        // Lambda
+        Set<Map.Entry<Integer, Agenda>> agendaDeContatos7 = new TreeSet<>(Comparator.comparing((objNome) -> objNome.getValue().getNome()));
+        agendaDeContatos7.addAll(agendaDeContatos1.entrySet());
+        for(Map.Entry<Integer, Agenda> imprimiEntry : agendaDeContatos7) {
+            System.out.println(imprimiEntry.getKey() + " - " + imprimiEntry.getValue().getNome());
+        }
     }
 
 }
