@@ -19,6 +19,8 @@ public class ordenacaoDeElementosEmUmaColecaoList1 {
             add(new Gato("Jon", 18, "preto"));
             add(new Gato("Simba", 6, "tigrado"));
             add(new Gato("Jon", 12, "amarela"));
+            add(new Gato("A", 12, "Amarelo"));
+			add(new Gato("C", 12, "Amarelo"));
         }};
         System.out.println(meusGatos);
 
@@ -79,7 +81,7 @@ class Gato implements Comparable<Gato> {
     @Override
     public int compareTo(Gato gato) {
         // TODO Auto-generated method stub
-        return this.getNome().compareToIgnoreCase(getNome());
+        return this.getNome().compareToIgnoreCase(gato.getNome());
     }                                                           
                                                             
 }                                                           

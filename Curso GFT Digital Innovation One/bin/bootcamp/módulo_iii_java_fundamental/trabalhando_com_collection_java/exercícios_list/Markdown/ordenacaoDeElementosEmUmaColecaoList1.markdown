@@ -92,7 +92,7 @@ class Gato implements Comparable<Gato> {
     @Override
     public int compareTo(Gato gato) {    //compareToIgnoreCase(): comparar para ignorar maiúsculas e minúsculas
         // TODO Auto-generated method stub
-        return this.getNome().compareToIgnoreCase(getNome());//comparando o nome do gato com o próximo gato da lista
+        return this.getNome().compareToIgnoreCase(gato.getNome());//comparando o nome do gato com o próximo gato da lista
                                                              //estou comparando nomes q são String, a própria String têm um método chamado compareToIgnoreCase:
     }                                                        //compareToIgnoreCase = retorna um int. Então se esse return retornar 0, qr dizer q o "gato" q estou comparando cm o próximo "gato" da lista é pq os 2 gatos têm nomes iguais.    
                                                             //O próprio método compareTo() tb retorna 0 -1 ou 1.

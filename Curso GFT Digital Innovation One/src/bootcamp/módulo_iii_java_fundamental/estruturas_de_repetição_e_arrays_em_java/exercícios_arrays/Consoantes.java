@@ -22,10 +22,10 @@ public class Consoantes {
             System.out.println("Digite uma letra: ");
             String letra = scan.next();
 
-            if (!(letra.equalsIgnoreCase("a") ||
-                    letra.equalsIgnoreCase("e") ||
-                    letra.equalsIgnoreCase("i") ||
-                    letra.equalsIgnoreCase("o") ||
+            if (!(letra.equalsIgnoreCase("a") |
+                    letra.equalsIgnoreCase("e") |
+                    letra.equalsIgnoreCase("i") |
+                    letra.equalsIgnoreCase("o") |
                     letra.equalsIgnoreCase("u"))) {
 
                 consoantes[i] = letra;

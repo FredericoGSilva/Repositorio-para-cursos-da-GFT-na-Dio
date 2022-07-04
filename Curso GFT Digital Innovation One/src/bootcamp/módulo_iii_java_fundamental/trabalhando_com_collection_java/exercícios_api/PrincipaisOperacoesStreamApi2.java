@@ -13,7 +13,6 @@ public class PrincipaisOperacoesStreamApi2 {
         
         List<String> numerosAleatorios = Arrays.asList("1", "0", "4", "1", "2", "3", "9", "9", "6", "5");
 
-    
         System.out.println("1 - Imprima todos os elementos dessa Lista String: ");
         
         System.out.println("Classe Anônima - ");
@@ -34,7 +33,7 @@ public class PrincipaisOperacoesStreamApi2 {
     
         System.out.println("2 - Pegue os 5 primeiros números e coloque dentro de um Set: ");
 
-        System.out.println("Reference Method - ");
+        System.out.println(" Reference Method - ");
         numerosAleatorios.stream().limit(5 + 1).collect(Collectors.toSet()).forEach(System.out :: println);
 
         System.out.println(" O mesmo resultado mas agora passando o List para um Set de um jeito mais explícito - ");

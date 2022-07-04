@@ -15,7 +15,7 @@ public class OrdemInversa {
 
         System.out.println("Vetor normal");
         while (contador <= (vetor.length -1)) {/*length retorna o tamanho do vetor. -1 é porque o vetor começa no 0  
-                                              length irá percorrer as posições e como eu tenho 6 elementos em 5 posições, p/ java entender q não é 6 posições e sim 5*/
+                                              length irá percorrer as posições e como eu tenho 6 elementos em 5 posições, p/ java entender q não é 6 posições e sim 5 pois 0 conta como uma posição.*/
 
             System.out.print(vetor[contador] + " "); //Assim q iniciar o contador será 0 e mostrará vetor na posição 0 q será o elemento -5 e assim seguirá o loop até contador ser menor ou igual ao vetor.length-1
             contador++;                                 /*Poderia declarar contador < vetor.length q daria o mesmo resultado 

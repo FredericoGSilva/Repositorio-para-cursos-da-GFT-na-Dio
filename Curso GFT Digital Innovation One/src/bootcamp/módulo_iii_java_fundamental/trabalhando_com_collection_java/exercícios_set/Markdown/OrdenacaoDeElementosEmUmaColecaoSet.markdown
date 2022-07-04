@@ -93,6 +93,10 @@ public class OrdenacaoDeElementosEmUmaColecaoSet {
         for (Series series : minhasSeries3) { //Uma das séries não será mostrado pois elas têm o mesmo tempo de episódio e a Interface Set não permite elementos duplicados(repetidos)
             System.out.println(series);
         }      
+        	/* Na classe "Series" o método compareTo() da inteface Comparable<> irá utilizar o "Tempo de episódio" de cada série para ordenar. Do menor tempo para o maior.
+	        Como a interface Set<> não permite elementos duplicados, o método terá q der uma alternativa p/ comparar elementos de tempo de episódio iguais. 
+	        Exempolo: se (tempoDeEpisodio != 0) se não comparar por gereroDaSerie*/ 
+
         
         /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -109,6 +113,11 @@ public class OrdenacaoDeElementosEmUmaColecaoSet {
             System.out.println(series);
         }   
     }
+    /*Lá na classe "ComparatorNomeGeneroTempo" o método compare() da interface Comparator<> irá comparar pelo nome(ordem alfabética) das Séries.
+    Set<> n permite elementos duplicados, então se 2 ou mais elementos tiverem os nomes iguais, serão comparados por gênero e se tiverem.
+    Se tiverem elementos com gêneros iguais, serão comparados por tempo de episódio.
+    Se os elementos tiverem todos os atributos iguais, qr dizer q é o mesmo elemento.*/
+
 }
 
 class Series implements Comparable<Series>{

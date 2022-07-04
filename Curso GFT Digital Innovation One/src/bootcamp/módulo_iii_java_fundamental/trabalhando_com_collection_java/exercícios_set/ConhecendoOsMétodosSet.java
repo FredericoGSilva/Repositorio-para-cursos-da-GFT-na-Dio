@@ -98,7 +98,7 @@ public class ConhecendoOsMétodosSet {
         System.out.println("Exiba todas as notas na ordem que foram informadas: "); 
 
         Set<Double> notas2 = new LinkedHashSet<>();
-        notas2.add(7.7);
+        notas2.add(7.0);
         notas2.add(8.5);
         notas2.add(9.3);
         notas2.add(5.0);

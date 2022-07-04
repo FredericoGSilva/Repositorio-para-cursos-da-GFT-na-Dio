@@ -38,7 +38,7 @@ public class OrdenacaoDeElementosEmUmaColecaoSet {
         for (Series recebeSeries : minhasSeries1) {
             System.out.println("Nome: " + recebeSeries.getNome() + " - " +
                     "Genêro: " + recebeSeries.getGenero() + " - " +
-                    "Tempo de episódio: " + recebeSeries.getTempoEpisodio());
+                    "Tempo de episódio: " + recebeSeries.getTempoEpisodio());      
         }
 
         System.out.println("\nImpresso com o loop forEach e o método toString criado lá na " +
@@ -54,10 +54,40 @@ public class OrdenacaoDeElementosEmUmaColecaoSet {
             System.out.printf("Nome: %s - Genêro: %s - Tempo de Episódio: %s\n",
                     series.getNome(), series.getGenero(), series.getTempoEpisodio());
         }
-
         System.out.println("------------------------------------------------------------------------------------------------------------------");
 
-       
+        System.out.println("\nOrdem de inserção"); 
+
+        Set<Series> minhasSeries2 = new LinkedHashSet<>() {{
+            add(new Series("Got", "Fantasia", 60));
+            add(new Series("Dark", "Drama", 60));
+            add(new Series("That '70s show", "Fantasia", 25));
+        }};
+
+        for(Series imprimi : minhasSeries2) {
+            System.out.println(imprimi);
+        }
+        System.out.println("------------------------------------------------------------------------------------------------------------------");
+
+        System.out.println("\nOdem natural por (Tempo de episódio)");
+
+        Set<Series> minhasSeries3 = new TreeSet<>();  
+        minhasSeries3.addAll(minhasSeries1);
+
+        for(Series imprimi : minhasSeries3) {
+            System.out.println(imprimi);
+        }
+        System.out.println("------------------------------------------------------------------------------------------------------------------");
+
+        System.out.println("\nOrdem por Nome, Genêro e Tempo de Episódio"); 
+
+        Set<Series> minhasSeries4 = new TreeSet<>(new ComparatorNomeGeneroTempo()); 
+        minhasSeries4.addAll(minhasSeries1);
+
+        for(Series imprimi : minhasSeries4) {
+            System.out.println(imprimi);
+        }
+                
     }
 }
 

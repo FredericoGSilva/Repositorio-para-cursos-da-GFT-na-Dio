@@ -41,7 +41,7 @@ public class PrincipaisOperacoesStreamApi1 {
         } 
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 
-        // Function Interface no modo Classe Anônima 
+        // Function Interface usando Classe Anônima 
         Set<Map.Entry<Integer, Agenda>> agendaDeContatos3 = new TreeSet<>(Comparator.comparing(new Function<Map.Entry<Integer, Agenda>, Integer>() {
             @Override
             public Integer apply(Entry<Integer, Agenda> objNumero) {
@@ -77,7 +77,7 @@ public class PrincipaisOperacoesStreamApi1 {
         }
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 
-        //Function Interface no modo Classe Anônima
+        //Function Interface usando Classe Anônima
         Set<Map.Entry<Integer, Agenda>> agendaDeContatos6 = new TreeSet<>(Comparator.comparing(new Function<Map.Entry<Integer, Agenda>, String>() {
             @Override
             public String apply(Entry<Integer, Agenda> objNome) {

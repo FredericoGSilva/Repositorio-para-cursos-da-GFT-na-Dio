@@ -14,7 +14,7 @@ public class ArrayMultidimensional {
         int[][] matriz = new int[4][4]; // [linha] [coluna]
         
         //Primeiro for irá navegar dentro da matriz geral ou seja será pego cada linha. 
-        //i < matriz.length --- loop só para quando i for menor q o tamanho da matriz
+        //i < matriz.length --- loop só para quando i for maior q o tamanho da matriz
         for (int i = 0; i < matriz.length; i++) {//i representa cada linha da matriz e cada linha vai ter 4 elementos representado a baixo por j 
             
             //Percorre todos os elementos de cada linha i
@@ -25,7 +25,7 @@ public class ArrayMultidimensional {
             }
         }
 
-        //Irá navegar e pegar cada elemento da primeira linha e vai imprimir
+        //Irá navegar e pegar cada elemento da primeira linha.
         //Mostrar os números aleatórios colocados na matriz
         //Usar o for each
         System.out.println("\nMatriz\n"); 
