@@ -55,7 +55,7 @@ Modelo é a chave e o consumo é o valor:
         System.out.println(consumos); 
         System.out.println("-----------------------------------------------------------------------------------------\n");                                                    
 
-        System.out.println("Exiba o modelos mais econômico: ");
+        System.out.println("Exiba o modelo mais econômico: ");
         Double consumoMaisEficiente = Collections.max(carrosPopulares.values());
 
         Set<Map.Entry<String, Double>> entries = carrosPopulares.entrySet();

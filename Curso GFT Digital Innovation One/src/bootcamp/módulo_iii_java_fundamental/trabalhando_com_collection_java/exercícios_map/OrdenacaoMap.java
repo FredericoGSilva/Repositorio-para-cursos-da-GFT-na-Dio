@@ -57,8 +57,14 @@ public class OrdenacaoMap {
         }
         System.out.println("----------------------------------------------------------------------------------------");
 
-    
-          
+        System.out.println("Ordem alfabética (nomes dos livros):");
+
+        Set<Map.Entry<String, Livro>> meusLivros4 = new TreeSet<>(new ComparatorNomeDosLivros());
+        meusLivros4.addAll(meusLivros1.entrySet());
+
+        for(Map.Entry<String, Livro> recebeLivros4 : meusLivros4) {
+            System.out.println(recebeLivros4.getKey() + " - " + recebeLivros4.getValue().getNome());
+        }
     }
 }
 
@@ -101,7 +107,7 @@ class Livro {
     }   
 }
 
-class ComparatorNome implements Comparator<Map.Entry<String, Livro>> {
+class ComparatorNomeDosLivros implements Comparator<Map.Entry<String, Livro>> {
 
     @Override
     public int compare(Entry<String, Livro> livro1, Entry<String, Livro> livro2) {
