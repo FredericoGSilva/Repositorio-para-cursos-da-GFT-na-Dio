@@ -3,6 +3,7 @@ package bootcamp.módulo_iii_java_fundamental.trabalhando_com_collection_java.ex
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class ExemploList {
@@ -53,12 +54,12 @@ public class ExemploList {
 
         System.out.println("Exiba a soma dos valores: ");
         
-        Iterator<Double> iterator = notas.iterator();
+        Iterator<Double> iterator1 = notas.iterator();
         
         Double soma = 0.0;
 
-        while(iterator.hasNext()) {
-            Double next = iterator.next();
+        while(iterator1.hasNext()) {
+            Double next = iterator1.next();
             soma += next; 
         }                
 
@@ -82,12 +83,12 @@ public class ExemploList {
 
         System.out.println("Remova as notas menores que 7 e exiba a lista: ");
 
-        Iterator<Double> iterator3 = notas.iterator();
+        Iterator<Double> iterator2 = notas.iterator();
 
-        while(iterator3.hasNext()) {
-            Double next = iterator3.next();
+        while(iterator2.hasNext()) {
+            Double next = iterator2.next();
             if (next < 7) {
-                iterator3.remove();
+                iterator2.remove();
             }            
         }
 
@@ -99,7 +100,47 @@ public class ExemploList {
         notas.clear();//clear = apaga toda a lista
         System.out.println("Lista vazia: " + notas);
 
-        System.out.println("Confira se a lista está vazia: " + notas.isEmpty());        
+        System.out.println("Confira se a lista está vazia: " + notas.isEmpty());   
+        /*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    //  ATENÇÃO: Para você - Resolva esses exercícios utilizando os métodos da implementação LinkedList:
+
+        System.out.println("\nCrie uma lista chamada notas3 e coloque todos os elementos da list Arraylist nessa nova lista: ");
+
+        List<Double> notas2 = new ArrayList<>();
+        notas2.add(7.0);
+        notas2.add(8.5);
+        notas2.add(9.3);
+        notas2.add(5.0);
+        notas2.add(7.0);
+        notas2.add(0.0);
+        notas2.add(3.6);
+
+        List<Double> notas3 = new LinkedList<>(); // LinkedList notas3 irá receber ArraysList notas2
+
+        notas3.addAll(notas2);
+        System.out.println(notas3);
+        /*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+        System.out.println("Mostre a primeira nota da nova lista sem removê-lo: ");
+
+        System.out.println(notas3.get(0));
+
+/*        Iterator<Double> iterator3 = notas3.iterator();
+ 
+        while(iterator3.hasNext()) {
+            System.out.println(iterator3.next());
+            break;
+        }
+        */
+        /*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+ 
+        System.out.println("Mostre a primeira nota da nova lista removendo-o: ");
+
+        System.out.println(notas3.get(0));
+        notas3.remove(0);
+
+        System.out.println(notas3.toString());
 
     }                                                                                       
 }

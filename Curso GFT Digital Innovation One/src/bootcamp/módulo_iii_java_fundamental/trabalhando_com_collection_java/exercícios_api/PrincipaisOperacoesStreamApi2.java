@@ -15,7 +15,7 @@ public class PrincipaisOperacoesStreamApi2 {
 
         System.out.println("1 - Imprima todos os elementos dessa Lista String: ");
         
-        System.out.println("Classe Anônima - ");
+        System.out.println("Classe Anônima e Function Interface - ");
         numerosAleatorios.stream().forEach(new Consumer<String>() {
             @Override
             public void accept(String numerosDaListaStream) { 
@@ -26,18 +26,20 @@ public class PrincipaisOperacoesStreamApi2 {
         System.out.println("Lambda - ");
         numerosAleatorios.stream().forEach(numeros -> System.out.println(numeros)); 
 
-        System.out.println("Reference Method - ");  
+        System.out.println("Method Reference - ");  
         numerosAleatorios.stream().forEach(System.out :: println);   
 
         System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------");  
     
         System.out.println("2 - Pegue os 5 primeiros números e coloque dentro de um Set: ");
 
-        System.out.println(" Reference Method - ");
+        System.out.println("Method Reference - ");
         numerosAleatorios.stream().limit(5 + 1).collect(Collectors.toSet()).forEach(System.out :: println);
 
         System.out.println(" O mesmo resultado mas agora passando o List para um Set de um jeito mais explícito - ");
+
         Set<String> numerosAleatorios2 = numerosAleatorios.stream().limit(5 + 1).collect(Collectors.toSet());
+        
         Iterator<String> iteraSet = numerosAleatorios2.iterator();
         while (iteraSet.hasNext()) {
             System.out.println(iteraSet.next());

@@ -1,7 +1,6 @@
 package bootcamp.módulo_iii_java_fundamental.trabalhando_com_collection_java.exercícios_api.exemplos;
 
 import java.util.List;
-import java.util.function.Function;
 import java.util.ArrayList;
 import java.util.Comparator;
 
