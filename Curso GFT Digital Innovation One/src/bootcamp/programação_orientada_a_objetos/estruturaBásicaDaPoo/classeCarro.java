@@ -1,4 +1,4 @@
-package bootcamp.programação_orientada_a_objetos;
+package bootcamp.programação_orientada_a_objetos.estruturaBásicaDaPoo;
 
 public class classeCarro {
     private String cor;
